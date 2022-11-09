@@ -6,8 +6,12 @@ const webScreenSize = 600;
 class PadingManager {
  // static EdgeInsets pading2 = EdgeInsets.all(MediaQuery.of(context).size.width/8);
   static double pading10 = 10;
+  static double pading9 = 9;
+  static double pading5 = 5;
+  static double pading41 = 41;
   static double pading24 = 24;
   static double pading27 = 27;
+  static double pading35 = 35;
   static double pading39 = 39;
   static double pading64 = 64;
   static double pading17 = 17;
@@ -22,9 +26,9 @@ class PadingManager {
   static double pading47 = 47;
   static double pading66 = 66;
   static double pading65 = 65;
-  static double pading151 = 160;
-  static double pading315 = 315;
+  static double pading80 = 80;
+  static double pading160 = 160;
+  static double pading250 = 210;
   static double widthTextField = 287;
   static double heightTextField = 43;
-
 }

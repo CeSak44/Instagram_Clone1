@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 
 
@@ -11,7 +12,8 @@ TextStyle _getTextStyle(
   );
 }
 TextStyle getLabelText(
-    {fontSize = FontSize.s15,
+    {
+    fontSize = FontSize.s15,
     fontweight = FontWeightManager.bold,
     fontFamily = "Montserrat",
     required Color color}
@@ -31,7 +33,16 @@ TextStyle getLabelTextSemiBold(
 TextStyle getLabelTextSplash(
     {fontSize = FontSize.s43,
     fontweight = FontWeightManager.bold,
-    fontFamily = "InstagrameFont",
+    fontFamily = "Instagram",
+    required Color color}
+    ) 
+    {
+  return _getTextStyle(fontSize, fontweight, fontFamily, color);
+}
+TextStyle getLabelTextHome(
+    {fontSize = FontSize.s31,
+    fontweight = FontWeightManager.bold,
+    fontFamily = "Instagram",
     required Color color}
     ) 
     {
@@ -52,6 +63,6 @@ class FontSize {
   static const double s18 = 18;
   static const double s19 = 19;
   static const double s20 = 20;
+  static const double s31 = 36;
   static const double s43 = 43;
 }
-

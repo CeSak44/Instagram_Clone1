@@ -14,6 +14,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   flutter_screenutil: ^5.6.0
+  # dashed_circle:
 
 dev_dependencies:
   flutter_test:
@@ -25,17 +26,19 @@ flutter:
 
   uses-material-design: true
   assets:
-    - assets/icons/SplashLogo.png
-    - assets/icons/LoginLogo.png
-    - assets/icons/facebookLogin.png
+    - assets/icons/
+    
+    
+    - assets/Images/
+    - assets/icons/icon/Outline/
 
   fonts:
     - family: Montserrat
       fonts:
         - asset: assets/Fonts/Montserrat.ttf
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+    - family: Instagram
+      fonts:
+        - asset: assets/Fonts/InstagrameFont.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

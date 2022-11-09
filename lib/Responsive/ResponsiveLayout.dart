@@ -20,5 +20,6 @@ class Responsive extends StatelessWidget {
         return mobileScreenLayout;
       },
     );
+    
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'Screens/Login.dart';
+import 'package:instagram_clone/Utils/Routes%20Manager.dart';
+import 'package:instagram_clone/Utils/ThemeManager.dart';
 
 void main() => runApp(const MyApp());
 
@@ -17,7 +17,9 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
           return const MaterialApp(
             debugShowCheckedModeBanner: false,
-            home: LoginScreen(),
+            onGenerateRoute: RouteGenerator.getRoute,
+            initialRoute: Routes.Splash,
+            // theme:getAppTheme(),
           );
         });
   }

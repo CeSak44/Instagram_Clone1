@@ -1,10 +1,20 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/Utils/Routes Manager.dart';
 import 'package:instagram_clone/Utils/ColorManager.dart';
 import '../Utils/TextStyle.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: must_be_immutable
 class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+  SplashScreen({super.key});
+  Timer? _timer;
+  _startDelay(){
+    _timer = Timer(const Duration ( seconds : 2), _goToNext);
+  }
+_goToNext(){
+  Navigator.pushReplacementNamed(context, Routes.LoginRoute);
+}
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +29,13 @@ class SplashScreen extends StatelessWidget {
             gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [ColorManager.forth, ColorManager.third, ColorManager.second],
-        )),
+          colors: [
+            ColorManager.forth,
+            ColorManager.third, 
+            ColorManager.second
+            ],
+        )
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,

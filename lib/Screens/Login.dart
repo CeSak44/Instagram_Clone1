@@ -5,7 +5,17 @@ import '../Utils/TextStyle.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+  LoginScreen({super.key});
+  // final TextEditingController _EmailPhonecontroler = TextEditingController();
+  // final TextEditingController _Passwordcontroler = TextEditingController();
+  
+  // @override
+  // void dispose() {
+    
+  //   _EmailPhonecontroler.dispose();
+  //   _Passwordcontroler.dispose();
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +24,8 @@ class LoginScreen extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (context, child) {
-          return Material(
-            child: Container(
+          return Scaffold(
+            body: Container(
               decoration: BoxDecoration(
                   gradient: LinearGradient(
                 begin: Alignment.topLeft,
@@ -30,9 +40,14 @@ class LoginScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  SizedBox(
+                    height: PadingManager.pading52.h,
+                  ),
                   Image.asset('assets/icons/LoginLogo.png'),
                   // Padding(padding: EdgeInsets.all(PadingManager.pading47.w)),
-                  SizedBox(height: 64.h,),
+                  SizedBox(
+                    height: 64.h,
+                  ),
                   SizedBox(
                     width: PadingManager.widthTextField.w,
                     height: PadingManager.heightTextField.h,
@@ -50,7 +65,9 @@ class LoginScreen extends StatelessWidget {
                           labelText: 'Phone number,User name or E-mail'),
                     ),
                   ),
-                   SizedBox(height: PadingManager.pading52.h,),
+                  SizedBox(
+                    height: PadingManager.pading52.h,
+                  ),
                   SizedBox(
                     width: PadingManager.widthTextField.w,
                     height: PadingManager.heightTextField.h,
@@ -63,27 +80,36 @@ class LoginScreen extends StatelessWidget {
                         fillColor: Colors.white,
                         border: OutlineInputBorder(
                             borderSide: BorderSide.none,
-                            borderRadius: BorderRadius.circular(8)),
+                            borderRadius: BorderRadius.circular(8.r)),
                         labelStyle: getLabelText(color: ColorManager.shadeGrey),
                         labelText: 'Password',
                       ),
                     ),
                   ),
-                  SizedBox(height: PadingManager.pading13.h,),
-                  TextButton(
-                    onPressed: (() => {}),
-                    child: Text(
-                      'Forgot password?',
-                      style: getLabelText(color: Colors.white),
-                    ),
+                  // SizedBox(height: 13.h,),
+
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: PadingManager.pading250.w,
+                      ),
+                      TextButton(
+                        onPressed: (() => {}),
+                        child: Text(
+                          'Forgot password?',
+                          style: getLabelText(color: Colors.white),
+                        ),
+                      ),
+                    ],
                   ),
-                  SizedBox(height: PadingManager.pading13.h,),
+
+                  SizedBox(
+                    height: PadingManager.pading30.h,
+                  ),
                   OutlinedButton(
                       style: OutlinedButton.styleFrom(
-                        fixedSize: Size(
-                            PadingManager.widthTextField.w,
-                            PadingManager.heightTextField.h
-                            ),
+                        fixedSize: Size(PadingManager.widthTextField.w,
+                            PadingManager.heightTextField.h),
                         backgroundColor: ColorManager.loginBleu,
                         shape: const RoundedRectangleBorder(
                             borderRadius: BorderRadius.all(Radius.circular(8))),
@@ -93,7 +119,9 @@ class LoginScreen extends StatelessWidget {
                         'Log in',
                         style: getLabelTextSemiBold(color: Colors.white),
                       )),
-                  Padding(padding: EdgeInsets.only(top: PadingManager.pading47.h)),
+                  SizedBox(
+                    height: PadingManager.pading52.h,
+                  ),
                   Text(
                     "Or",
                     style: getLabelTextSemiBold(color: Colors.white),
@@ -104,26 +132,48 @@ class LoginScreen extends StatelessWidget {
                     indent: 70,
                     endIndent: 70,
                   ),
-                  Padding(padding: EdgeInsets.only(top: PadingManager.pading55.h)),
+                  SizedBox(
+                    height: PadingManager.pading52.h,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Image.asset('assets/icons/facebookLogin.png'),
-                      SizedBox(width: PadingManager.pading27.w,),
+                      SizedBox(
+                        width: PadingManager.pading27.w,
+                      ),
                       Text(
                         "Log in with FaceBook",
                         style: getLabelTextSemiBold(color: Colors.white),
                       ),
                     ],
                   ),
-              Divider(color: Colors.white,),
-              TextButton(
-                onPressed: ((() => {})), 
-              child:Text("Don't have an Account?",style : getLabelText(color: Colors.white) ),
-              )
+                  SizedBox(
+                    height: PadingManager.pading80.h,
+                  ),
+                  const Divider(
+                    color: Colors.white,
+                  ),
+                  SizedBox(
+                    height: PadingManager.pading9.h,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Don't have an Account?",
+                        style: getLabelText(color: Colors.white),
+                      ),
+                      TextButton(
+                        onPressed: ((() => {})),
+                        child: Text("Sign in",
+                            style: getLabelText(color: Colors.white)),
+                      ),
+                    ],
+                  )
                 ],
-              
               ),
             ),
           );
