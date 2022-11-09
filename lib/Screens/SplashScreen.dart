@@ -8,13 +8,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // ignore: must_be_immutable
 class SplashScreen extends StatelessWidget {
   SplashScreen({super.key});
-  Timer? _timer;
-  _startDelay(){
-    _timer = Timer(const Duration ( seconds : 2), _goToNext);
-  }
-_goToNext(){
-  Navigator.pushReplacementNamed(context, Routes.LoginRoute);
-}
+//  Timer? _timer;
+// _startDelay(){
+// _timer = Timer(const Duration ( seconds : 2), _goToNext);
+// }
+// _goToNext(){
+// Navigator.pushReplacementNamed(context, Routes.LoginRoute);
+// }
 
   @override
   Widget build(BuildContext context) {
